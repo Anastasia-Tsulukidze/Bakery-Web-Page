@@ -1,3 +1,22 @@
+const navBurger = document.querySelector(".burger");
+const navLinks = document.querySelector(".mid-nav");
+const navigationBurger = document.getElementById("nav-burger");
+const htmlElement = document.querySelector("html");
+
+function navActiveToggler() {
+  navLinks.classList.toggle("mid-nav__active");
+}
+
+navBurger.addEventListener("click", navActiveToggler);
+
+function navBarActiveHandler() {
+  document.documentElement.scrollTop = 0;
+  htmlElement.classList.toggle("overflow-h");
+  navigationBurger.classList.toggle("burger__active");
+}
+
+navBurger.addEventListener("click", navBarActiveHandler);
+
 document.querySelectorAll(".carousel").forEach((carousel) => {
   const items = carousel.querySelectorAll(".carousel--item");
   const buttonsHtml = Array.from(items, () => {

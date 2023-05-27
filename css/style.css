@@ -47,8 +47,24 @@ header {
   font-family: "Nunito";
   font-size: 18px;
 }
+.burger {
+  display: none;
+  cursor: pointer;
+}
+.burger > div {
+  width: 32px;
+  height: 3px;
+  background: aliceblue;
+  margin: 0.5rem 0;
+  transition: transform 0.6s ease;
+}
 .logo {
   width: 120px;
+}
+.middle-navigation {
+  display: flex;
+  align-items: center;
+  gap: 10rem;
 }
 .title {
   display: flex;
@@ -450,4 +466,306 @@ header {
 iframe {
   width: 450px;
   height: 400px;
+}
+@media (max-width: 1780px) {
+  header {
+    width: 100%;
+    height: auto;
+  }
+  .shop-now {
+    margin-bottom: 3rem;
+  }
+  .products {
+    width: 100%;
+    height: auto;
+  }
+  .products .container {
+    margin-bottom: 5rem;
+  }
+  .product {
+    gap: 5%;
+    margin-bottom: 10rem;
+  }
+  .bakery {
+    width: 100%;
+    place-items: center;
+  }
+  .hover {
+    max-width: 90%;
+  }
+}
+@media (max-width: 1270px) {
+  header {
+    width: auto;
+  }
+  .title div p {
+    color: rgba(255, 255, 255, 0.993);
+    font-family: "Nunito";
+    font-size: 16px;
+    width: 100%;
+  }
+  .location-flex {
+    padding-top: 15%;
+  }
+}
+@media (max-width: 1108px) {
+  header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url(./../img/tasty-bread-table.jpg);
+    background-size: cover;
+    color: #fff;
+    max-width: 1108px;
+  }
+  .title div:first-child {
+    box-shadow: 10px 10px 60px rgba(29, 29, 29, 0.75);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgb(163, 163, 163);
+    border-radius: 3px;
+    padding: 15px;
+  }
+  .title {
+    justify-content: center;
+    margin-top: 1rem;
+    padding-bottom: 2rem;
+  }
+  .title div p {
+    font-size: 1rem;
+    color: #ffffff;
+    width: 600px;
+  }
+  .title div {
+    width: 70%;
+  }
+  .title div div {
+    width: 100px;
+    height: 50px;
+  }
+  .shop-now {
+    width: 150px;
+    margin: 10px 0 20px 0;
+  }
+  .text {
+    padding: 10px 15px;
+  }
+  .location-flex {
+    gap: 20px;
+  }
+  iframe {
+    width: 500px;
+    height: 350px;
+  }
+  .location {
+    bottom: 10px;
+  }
+  .delivery-qa {
+    padding-top: 1rem;
+  }
+  .delivery-paragraph {
+    line-height: 1.2;
+  }
+  .delivery-paragraph {
+    mix-blend-mode: difference;
+    color: rgb(255, 255, 255);
+  }
+  .location-flex {
+    padding-top: 25px;
+  }
+  .location {
+    display: none;
+  }
+  .carousel--item img {
+    width: 300px;
+  }
+}
+@media (max-width: 925px) {
+  header .title div p {
+    width: 100%;
+  }
+  .navigation {
+    gap: 10%;
+  }
+  .middle-nav {
+    gap: 30px;
+  }
+  .delivery-qa {
+    gap: 50px;
+  }
+  .accordion {
+    width: 400px;
+    margin-top: 30px;
+  }
+  .delivery {
+    background-image: linear-gradient(
+        rgba(0, 0, 0, 0.553),
+        rgba(0, 0, 0, 0.553)
+      ),
+      url(./../img/close-up-bread-loaf-with-seeds.jpg);
+  }
+}
+@media (max-width: 750px) {
+  header .title div p {
+    width: 100%;
+  }
+  .shop-now {
+    padding: 10px 15px;
+    width: auto;
+  }
+  .carousel--item img {
+    width: 250px;
+  }
+  .about-us-paragraph {
+    width: 250px;
+    line-height: 1rem;
+  }
+  .about-us-title {
+    margin-bottom: 1.2rem;
+    font-size: 2rem;
+  }
+  .product {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .middle-navigation {
+    gap: 5rem;
+  }
+}
+@media (max-width: 660px) {
+  header {
+    position: relative;
+  }
+  .burger {
+    position: absolute;
+    display: block;
+    top: 3rem;
+    right: 2.5rem;
+    z-index: 1;
+  }
+  .middle-nav {
+    display: none;
+  }
+  .middle-nav {
+    animation: transform 0.6s ease;
+  }
+  .burger.burger__active div:nth-child(1) {
+    transform: rotate(32deg) translateY(13px);
+  }
+
+  .burger.burger__active div:nth-child(2) {
+    opacity: 0;
+  }
+
+  .burger.burger__active div:nth-child(3) {
+    transform: rotate(-32deg) translateY(-13px);
+  }
+  .mid-nav.mid-nav__active {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    gap: 30px;
+    margin-top: 2rem;
+    transform: translateX(0);
+
+    /* align-items: flex-end; */
+  }
+  .mid-nav .middle-nav {
+    justify-content: flex-end;
+  }
+
+  @keyframes transform {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  .middle-nav {
+    display: none;
+  }
+  .middle-nav {
+    animation: transform 0.6s ease;
+  }
+  .middle-navigation li {
+    position: absolute;
+    right: 6rem;
+    top: 3.1rem;
+  }
+  .delivery {
+    height: 130vh;
+  }
+  .delivery-qa {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .accordion-title {
+    margin-top: 10px;
+  }
+  .delivery-title {
+    padding-top: 0;
+  }
+  .qa-text {
+    font-size: 18px;
+  }
+  .item {
+    padding: 10px;
+  }
+  .hidden-box p {
+    line-height: 1rem;
+  }
+}
+@media (max-width: 600px) {
+  .product {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .bakery {
+    width: 300px;
+  }
+  .map iframe {
+    width: 80%;
+    text-align: center;
+  }
+  .map {
+    text-align: center;
+  }
+  .about-us {
+    height: 140vh;
+  }
+  .about-flex {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .carousel {
+    grid-row: 1/2;
+  }
+  .about-us-paragraph {
+    width: 90%;
+  }
+}
+@media (max-width: 430px) {
+  .bakery {
+    width: 250px;
+  }
+  .carousel--item img {
+    width: 200px;
+    margin-top: 15px;
+  }
+  .about-us-paragraph {
+    font-size: 14px;
+  }
+  .accordion {
+    width: 90%;
+  }
+  .delivery-title {
+    font-size: 1.5rem;
+  }
+  .delivery-paragraph {
+    font-size: 14px;
+    margin-top: 8px;
+  }
+  .accordion-title {
+    font-size: 1.5rem;
+  }
+  .accordion {
+    margin-top: 8px;
+  }
 }
